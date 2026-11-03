@@ -1,0 +1,25 @@
+<%-- Intestazione e menu per le pagine di errore.
+     Volutamente statica (niente sessione, niente database): deve funzionare anche quando qualcosa si rompe. --%>
+<header>
+    <div class="logo-container">
+        <img id="cup" src="<%= request.getContextPath() %>/logo/FootWorld.png" width="150" alt="FootWorld Logo">
+    </div>
+</header>
+
+<nav class="nav-bar">
+    <ul class="menu">
+        <li><a href="<%= request.getContextPath() %>/common/home.jsp">HOME</a></li>
+        <li><a href="<%= request.getContextPath() %>/categorie/scarpe.jsp">SCARPE</a></li>
+        <li><a href="<%= request.getContextPath() %>/categorie/sneakers.jsp">SNEAKERS</a></li>
+        <li><a href="<%= request.getContextPath() %>/categorie/abbigliamento.jsp">ABBIGLIAMENTO</a></li>
+        <li><a href="<%= request.getContextPath() %>/categorie/accessori.jsp">ACCESSORI</a></li>
+        <li><a href="<%= request.getContextPath() %>/categorie/regali.jsp">REGALI</a></li>
+
+        <li class="user-links">
+            <ul class="user-interaction-box">
+                <li><a href="<%= request.getContextPath() %>/common/login.jsp">Login<i class='bx bxs-user' id="accBox"></i></a></li>
+                <li class="cart-icon"><a href="<%= request.getContextPath() %>/common/cart.jsp">Carrello<i class='bx bx-cart-add'></i></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

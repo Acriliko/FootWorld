@@ -32,8 +32,8 @@
             } catch (Exception e) {
                 // Gestione dell'errore
                 e.printStackTrace();  // Log dell'errore nel server
-                response.sendRedirect(request.getContextPath() + "/errorPage.jsp"); // Reindirizza a una pagina di errore
-                return; // Importante terminare l'esecuzione della pagina dopo il reindirizzamento
+                response.sendError(500); // Mostra la pagina di errore 500 configurata in web.xml
+                return; // Importante terminare l'esecuzione della pagina dopo l'errore
             }
 
             if (prodotto != null) {

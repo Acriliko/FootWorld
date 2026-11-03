@@ -1,6 +1,6 @@
 <Context>
 
-    <Resource name="jdbc/FootWorldDB"
+    <Resource name="jdbc/FootWorld"
               auth="Container"
               type="javax.sql.DataSource"
               maxTotal="20"
