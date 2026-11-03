@@ -13,18 +13,12 @@ public class OrdineDAO implements OrdineDAOInterface {
     private static final String UPDATE_ORDINE_SQL = "UPDATE Ordini SET dataOrdine = ?, nomeCliente = ?, cognomeCliente = ?, cap = ?, indirizzoDiConsegna = ?, totale = ?, stato = ? WHERE orderID = ?";
     private static final String SELECT_ORDINE_BY_USER = "SELECT orderID, dataOrdine, nomeCliente, cognomeCliente, cap, indirizzoDiConsegna, totale, stato FROM Ordini WHERE nomeCliente = ? AND email = ?";
 
+    // Le connessioni vengono prese dal pool (DataSource) configurato in META-INF/context.xml
     protected Connection getConnection() {
-        String jdbcURL = "jdbc:mysql://localhost:3306/FootWorld";
-        String jdbcUsername = "root";
-        String jdbcPassword = "root2024";
-
         Connection connection = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+            connection = DBConnection.getConnection();
         } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         return connection;

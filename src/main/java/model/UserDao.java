@@ -9,23 +9,9 @@ import java.security.NoSuchAlgorithmException;
 
 public class UserDao implements UserDaoInterface<User> {
 
-    // Variabili per la connessione al database
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/FootWorld";
-    private static final String DB_USER = "root";
-    private static final String DB_PASSWORD = "root2024";
-
-    // Caricamento del driver MySQL
-    static {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Metodo privato per ottenere la connessione al database
+    // Le connessioni vengono prese dal pool (DataSource) configurato in META-INF/context.xml
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASSWORD);
+        return DBConnection.getConnection();
     }
 
     @Override

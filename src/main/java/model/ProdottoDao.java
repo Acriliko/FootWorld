@@ -5,21 +5,9 @@ import java.util.ArrayList;
 
 public class ProdottoDao implements ProdottoDaoInterface {
 
-    private String jdbcURL = "jdbc:mysql://localhost:3306/FootWorld";
-    private String dbUser = "root";
-    private String dbPassword = "root2024";
-
-    static {
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    // Metodo privato per ottenere la connessione al database
+    // Le connessioni vengono prese dal pool (DataSource) configurato in META-INF/context.xml
     private Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+        return DBConnection.getConnection();
     }
 
     @Override
