@@ -1,0 +1,250 @@
+/* Menu */
+.menu {
+    list-style: none;
+    background-color: #DFF2EB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 7px solid black;
+    border-bottom: 10px solid black;
+    border-radius: 30px;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 50px 50px;
+}
+
+.menu li {
+    position: relative;
+    display: inline;
+    transition: transform 0.1s ease-out;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu li a:hover {
+    color: #D6E4F0;
+    transform: scale(1.2);
+    transition: color 0.2s ease-out;
+}
+
+#borderMenu {
+    border-left: 1px solid black;
+    height: 20px;
+    margin: -3px 10px;
+    margin-top: 3px;
+}
+
+#accBox {
+    font-size: 20px;
+}
+
+.user-interaction-box {
+    font-size: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    margin-left: 200px;
+}
+
+.user-interaction-box li {
+    display: inline;
+}
+
+.cart-icon{
+    font-size: 20px;
+}
+.cart-icon a {
+    
+    color: black;
+    text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Logo */
+#cup {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#cup img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* FOOTER */
+footer {
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid black;
+    margin-top: 20px;
+    background-color: #F6F6F6;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #F6F6F6;
+}
+
+.footer-section .social-icons a {
+    display: inline-block;
+    padding: 5px;
+    background-color: #B9E5E8;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.footer-section .social-icons a i {
+    color: #000000;
+    font-size: 20px;
+}
+
+.footer-section .social-icons a:hover {
+    background: #B9E5E8;
+}
+
+.footer-bottom {
+    color: black;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .user-interaction-box {
+        justify-content: center;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    .menu li {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .user-interaction-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .menu li {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    .user-interaction-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    .footer-section h2 {
+        font-size: 16px;
+    }
+
+    .footer-section p, .footer-section ul li a {
+        font-size: 12px;
+    }
+}

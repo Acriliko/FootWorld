@@ -1,0 +1,49 @@
+<%@ page import="model.User" %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" href="<%= request.getContextPath() %>/CSS/fragments.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+<%
+  User user = new User();
+  
+  
+  
+%>
+<header>
+  <div class="logo-container">
+    <img id="cup" src="<%= request.getContextPath() %>/logo/FootWorld.png" width="150" alt="FootWorld Logo">
+  </div>
+</header>
+
+<div class="nav-bar">
+  <ul class="menu">
+    <li><a href="<%= request.getContextPath() %>/common/home.jsp">HOME</a></li>
+    <li><a href="<%= request.getContextPath() %>/categorie/scarpe.jsp">SCARPE</a></li>
+    <li><a href="<%= request.getContextPath() %>/categorie/sneakers.jsp">SNEAKERS</a></li>
+    <li><a href="<%= request.getContextPath() %>/categorie/abbigliamento.jsp">ABBIGLIAMENTO</a></li>
+    <li><a href="<%= request.getContextPath() %>/categorie/accessori.jsp">ACCESSORI</a></li>
+    <li><a href="<%= request.getContextPath() %>/categorie/regali.jsp">REGALI</a></li>
+    
+    <ul class="user-interaction-box">
+      <%
+        if (request.getSession(false) != null && session.getAttribute("currentSessionUser") != null) {
+      %>
+      <li><a href="<%= request.getContextPath() %>/userPage/userPage.jsp">Area Personale<i class='bx bxs-user' id="accBox"></i></a></li>
+      <li><a href="<%= request.getContextPath() %>/LogoutServlet">Logout <i id="accBox"></i></a></li>
+      <% } else { %>
+      <li><a href="<%= request.getContextPath() %>/common/login.jsp">Login<i class='bx bxs-user' id="accBox"></i></a></li>
+      
+      <% } %>
+      <div class="cart-icon">
+        <li><a href="<%= request.getContextPath() %>/common/cart.jsp">Carrello<i class='bx bx-cart-add'></i></a></li>
+      </div>
+    </ul>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+html {
+    position: relative;
+}
+
+
+
+body {
+    font-family: sans-serif;
+    background-color: #DFF2EB;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #B9E5E8;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 7px solid black;
+    border-bottom: 10px solid black;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estetica migliorata per .product-list */
+.product-list {
+    flex: 2;
+    padding: 20px;
+    background-color: #B9E5E8;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-list h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-color: #B9E5E8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 7px solid black;
+    border-bottom: 10px solid black;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-box {
+    flex: 0 0 150px;
+    height: 150px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.product-info p:first-child {
+    font-weight: bold;
+}
+
+.availability {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+
+.remove-button {
+    background-color: #B9E5E8;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 7px solid black;
+    border-bottom: 9px solid black;
+    border-radius: 15px;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 300ms;
+}
+
+.remove-button:hover {
+    background-color: #B9E5E8;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Checkout box */
+.checkout-box {
+    max-height: 200px;
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-box h2 {
+    margin-bottom: 20px;
+}
+
+#checkout-button {
+    background-color: #B9E5E8;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 7px solid black;
+    border-bottom: 9px solid black;
+    border-radius: 25px;
+    color: black;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    transition-duration: 300ms;
+}
+
+#checkout-button:hover {
+    background-color: #B9E5E8;
+    color: black;
+    transform: scale(1.1);
+}
+
+.content-box {
+    margin-left: 20px;
+}
+
+/* Media queries */
+@media (max-width: 1200px) {
+    .cart-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .checkout-box {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-item {
+        flex-direction: column;
+    }
+
+    .image-box, .product-info {
+        flex: none;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+
+    .quantity {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .remove-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        flex-direction: column;
+    }
+
+    .product-list {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .checkout-box {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-item {
+        padding: 5px 0;
+    }
+
+    .remove-button {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+    #checkout-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

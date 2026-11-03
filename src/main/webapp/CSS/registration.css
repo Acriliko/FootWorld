@@ -1,0 +1,196 @@
+body {
+    background-color: #DFF2EB;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: medium;
+    padding: 50px 50px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px -10px 0px;
+}
+
+#cup {
+    width: 120px;
+    height: 120px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Stile per il contenitore principale */
+.container {
+    max-width: 500px;
+    max-height: 100%;
+    margin: 0 auto 70px auto;
+    transform: translateY(5%);
+    padding: 20px;
+    background-color: #B9E5E8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Stile per il titolo */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+/* Stile per il form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stile per i campi di input */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Stile per le icone all'interno dei campi di input */
+.nameInput, .mailInput, .password, .indirizzo {
+    position: relative;
+    width: 100%;
+}
+
+.nameInput i, .mailInput i, .password i, .indirizzo i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #000000;
+}
+
+/* Stile per le checkbox e i link */
+.terms {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.terms a {
+    color: #B9E5E8;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Stile per il pulsante di invio */
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #B9E5E8;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #B9E5E8;
+}
+
+.btn:active {
+    background-color: #B9E5E8;
+}
+
+/* Stile per la sezione di accesso con social */
+.loginWith .btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.loginWith .btn:hover {
+    background-color: #B9E5E8;
+}
+
+.loginWith i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        margin: 10px 0;
+    }
+
+    .container {
+        margin: 0 auto 50px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

@@ -1,0 +1,170 @@
+/* admin.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #B9E5E8;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #D6E4F0;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #D6E4F0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    height: 100vh; /* 100% viewport height */
+    transition: transform 0.3s ease;
+}
+
+.sidebar a {
+    display: block;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #D6E4F0;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.card {
+    background-color: #D6E4F0;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    box-shadow: 0 0 10px rgba(150, 108, 108, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid black;
+    resize: none;
+}
+
+.file-input {
+    display: none;
+}
+
+.custom-file-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #6d6d6d;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.custom-file-button:hover {
+    background-color: #424242;
+}
+
+.file-name {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.file-name::before {
+    content: "Seleziona file: ";
+    font-size: 16px;
+    color: #333;
+}
+
+#order-details{
+    margin-top: 20x;
+    margin-bottom: 20px;
+}
+
+
+/* Media query per la barra laterale responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Set width to 100% for off-canvas */
+        position: absolute;
+        top: 0;
+        left: -100%; /* Hide sidebar by default */
+        bottom: 0;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.show {
+        transform: translateX(100%); /* Show sidebar when toggled */
+    }
+
+    .sidebar-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #6d6d6d;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 1100;
+    }
+
+    .main {
+        padding: 20px 10%; /* Adjusted padding for smaller screens */
+    }
+}
+
+/* Media query for extra small screens */
+@media (max-width: 576px) {
+    .main {
+        padding: 15px 5%; /* Further adjust padding */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 6px; /* Reduce padding in inputs */
+    }
+
+    .custom-file-button {
+        padding: 6px 10px; /* Reduce padding in custom button */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .file-name {
+        font-size: 14px; /* Adjust font size */
+    }
+}

@@ -1,0 +1,143 @@
+/* Imposta il carattere e il colore di sfondo di base per la pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DFF2EB;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile per il box di upload file */
+.upload-file-box {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background-color: #B9E5E8;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 7px solid black;
+    border-bottom: 10px solid black;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.upload-box {
+    display: none;
+    /* cursor: pointer;
+    border-style: dashed;
+    border-radius: 10px;
+
+    height: 200px;
+    width: 200px; */
+}
+
+
+
+.custom-file-upload {
+    
+    display: inline-block;
+    width: 50px; /* Adjust size as needed */
+    height:50px; /* Adjust size as needed */
+    text-align: center;
+    line-height: 50px; /* Adjust size as needed */
+    cursor: pointer;
+    border-style: dashed;
+    background-color: #B9E5E8;
+    cursor: pointer;
+    border-style: dashed;
+    border-radius: 10px;
+
+    height: 200px;
+    width: 200px;
+
+    /* border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 5px solid black;
+    border-bottom: 8px solid black; */
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+
+
+/* Stile per il form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Stile per il fieldset */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+/* Stile per il box delle informazioni del prodotto */
+.product-info-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Stile per le label */
+label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Stile per gli input di testo */
+input[type="text"], 
+textarea {
+    max-width: 100%;
+    padding: 10px;
+    margin: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Stile per il box di upload */
+#upload-box {
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+
+}
+
+/* Stile per la textarea */
+textarea {
+    margin: 10px;
+    height: 100px;
+    resize: vertical;
+}
+
+/* Stile per il select box */
+select {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Media query per rendere il layout responsivo */
+@media (max-width: 768px) {
+    .upload-file-box {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,191 @@
+body {
+    background-color: #B9E5E8;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#cup {
+    width: 100%;
+    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Stile per il contenitore principale */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background-color: #DFF2EB;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Stile per il titolo */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+/* Stile per il form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stile per i campi di input */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Stile per le icone all'interno dei campi di input */
+.mailInput, .password {
+    position: relative;
+    width: 100%;
+}
+
+.mailInput i, .password i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #000000;
+}
+
+/* Stile per le checkbox e i link */
+.terms {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.not-registered a {
+    text-decoration: none;
+}
+
+.not-registered a:hover {
+    text-decoration: underline;
+}
+
+/* Stile per il pulsante */
+.btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 50px;
+    background-color: #FFFFF0;
+    color: #000000;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #DFF2EB;
+}
+
+.btn:active {
+    background-color: #4A628A;
+}
+
+/* Stile per accesso con google e facebook */
+.loginWith .btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.loginWith .btn:hover {
+    background-color: #f0f0f0;
+}
+
+.loginWith i {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .terms {
+        font-size: 12px;
+    }
+
+    .loginWith .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 15px 5px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    input[type="text"], input[type="password"] {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .terms {
+        font-size: 10px;
+    }
+
+    .loginWith .btn {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
