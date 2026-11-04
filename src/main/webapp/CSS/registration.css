@@ -77,19 +77,39 @@ input[type="text"], input[type="password"] {
 
 /* Stile per le checkbox e i link */
 .terms {
-    text-align: left;
-    margin: 20px 0;
-    font-size: 14px;
+    text-align:left;
+    margin:20px 0;
+    font-size:14px;
+    color:#000000;
+}
+
+.terms label {
+    margin-bottom:12px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#000000;
+    cursor:pointer;
+}
+
+.terms input[type="checkbox"] {
+    width:18px;
+    height:18px;
+    flex-shrink:0;
+    accent-color:#000000;
+    cursor:pointer;
 }
 
 .terms a {
-    color: #B9E5E8;
-    text-decoration: none;
+    color:#0B4F8A;
+    font-weight:bold;
+    text-decoration:underline;
 }
 
 .terms a:hover {
-    text-decoration: underline;
+    color:#000000;
 }
+
 
 /* Stile per il pulsante di invio */
 .btn {

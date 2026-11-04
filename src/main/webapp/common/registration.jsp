@@ -39,8 +39,8 @@
         <p>Già registrato?<a href="login.jsp">Accedi</a></p>
 
         <div class="terms">
-            <label><input type="checkbox" required>Accetto i <a href="#">Termini e Condizioni</a></label><br><br>
-            <label><input type="checkbox">Iscriviti alla <a href="#">Newsletter</a></label>
+            <label><input type="checkbox" required><span>Accetto i <a href="#">Termini e Condizioni</a></span></label>
+            <label><input type="checkbox"><span>Iscriviti alla <a href="#">Newsletter</a></span></label>
         </div>
 
         <button type="submit" class="btn">Iscriviti</button>
